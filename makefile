@@ -5,7 +5,9 @@ LIBSRC = ./src/memset.c ./src/bzero.c ./src/memcmp.c ./src/memcpy.c \
 ./src/strrchr.c ./src/strstr.c ./src/strnstr.c ./src/strcmp.c \
 ./src/strncmp.c ./src/atoi.c ./src/isspace.c ./src/isalpha.c \
 ./src/isdigit.c ./src/isalnum.c ./src/isprint.c ./src/toupper.c \
-./src/tolower.c ./src/strlcpy.c ./src/calloc.c
+./src/tolower.c ./src/strlcpy.c ./src/calloc.c ./src/split.c \
+./src/split.c ./src/itoa.c ./src/putchar_fd.c ./src/putstr_fd.c \
+./src/putendl_fd.c ./src/putnbr_fd.c
 
 LIBOBJS = ${LIBSRC:.c=.o} 
 INCL = ./inc
