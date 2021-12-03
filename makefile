@@ -10,11 +10,11 @@ ft_memmove		ft_memchr		ft_strlen		ft_striteri	\
 ft_strdup		ft_strcpy		ft_strcat		ft_strrchr	\
 ft_strncat		ft_strlcat		ft_strchr		ft_strstr	\
 ft_strnstr		ft_strcmp		ft_strncmp		ft_atoi		\
-ft_isalpha		ft_isdigit		ft_isalnum					\
+ft_isalpha		ft_isdigit		ft_isalnum		ft_ulltoa	\
 ft_isprint		ft_toupper		ft_tolower		ft_strlcpy	\
 ft_calloc		ft_isascii		ft_substr		ft_strjoin	\
 ft_strtrim		ft_split		ft_itoa			ft_strmapi	\
-ft_putchar_fd	ft_putstr_fd	ft_putendl_fd	ft_putnbr_fd
+ft_putchar_fd		ft_putstr_fd		ft_putendl_fd		ft_putnbr_fd
 
 INCL = libft.h
 

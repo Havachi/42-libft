@@ -47,21 +47,23 @@ static int	ft_intlen(int num)
 	return (numlen - neg);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(int n, int fd)
 {
 	long	num;
 	int		numlen;
 	int		sep;
 	int		numlen2;
+	int		wrote;
 
 	num = (long)n;
 	numlen = ft_intlen(n);
 	sep = 1;
 	numlen2 = numlen;
+	wrote = 0;
 	if (num == 0)
 	{
 		ft_putchar_fd('0', fd);
-		return ;
+		return (1);
 	}
 	num = check_neg((long)n, fd);
 	while (--numlen > 0)
@@ -69,7 +71,9 @@ void	ft_putnbr_fd(int n, int fd)
 	while (numlen2-- > 0)
 	{
 		ft_putchar_fd(((num / sep) + '0'), fd);
+		wrote++;
 		num = num - ((num / sep) * sep);
 		sep = sep / 10;
 	}
+	return (wrote);
 }
