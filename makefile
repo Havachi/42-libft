@@ -24,10 +24,10 @@ SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(LIBFILES)))
 OBJS_DIR = ./
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(LIBFILES)))
 
-.c.o: $(SRCS)
+%.o: %.c $(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
-	
-$(NAME): $(OBJS) 
+
+$(NAME): $(OBJS)
 	$(AR) $@ $^
 	@echo "$(NAME) : Tip Top"
 
@@ -37,12 +37,12 @@ clean:
 	rm -f $(OBJS)
 	@echo "Clean !"
 
-fclean: clean 
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-so: 
+so:
 	@gcc -nostartfiles -fPIC $(CFLAGS) $(LIBSRC) -I$(INCL)
 	@gcc -nostartfiles -shared -o libft.so $(LIBOBJS) -I$(INCL)
 
